@@ -6,6 +6,7 @@ package Entidad;
  * @author Tonna/SA FR34K
  */
 /**/
+
 public class Persona {
     private String nombre;
     private String apellido;

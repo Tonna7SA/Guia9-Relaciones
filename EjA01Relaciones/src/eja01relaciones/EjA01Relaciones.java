@@ -28,12 +28,12 @@ public class EjA01Relaciones {
         p1.setNombre("Marvin");
         p1.setRaza("Caniche");
         p1.setEdad(2);
-        p1.setTamaño("Chico");
+        p1.setPorte("Chico");
         
         p2.setNombre("Duque");
         p2.setRaza("Labrador");
         p2.setEdad(4);
-        p2.setTamaño("Grande");
+        p2.setPorte("Grande");
         
         Persona d1 = new Persona();
         Persona d2 = new Persona();

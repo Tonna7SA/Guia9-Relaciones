@@ -9,17 +9,17 @@ public class Perro {
 
     private String nombre;
     private String raza;
-    private int edad;
-    private String tamaño;
+    private Integer edad;
+    private String porte;
 
     public Perro() {
     }
 
-    public Perro(String nombre, String raza, int edad, String tamaño) {
+    public Perro(String nombre, String raza, Integer edad, String porte) {
         this.nombre = nombre;
         this.raza = raza;
         this.edad = edad;
-        this.tamaño = tamaño;
+        this.porte = porte;
     }
 
     public String getNombre() {
@@ -38,25 +38,25 @@ public class Perro {
         this.raza = raza;
     }
 
-    public int getEdad() {
+    public Integer getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
+    public void setEdad(Integer edad) {
         this.edad = edad;
     }
 
-    public String getTamaño() {
-        return tamaño;
+    public String getPorte() {
+        return porte;
     }
 
-    public void setTamaño(String tamaño) {
-        this.tamaño = tamaño;
+    public void setPorte(String porte) {
+        this.porte = porte;
     }
 
     @Override
     public String toString() {
-        return "Perro{" + "nombre=" + nombre + ", raza=" + raza + ", edad=" + edad + ", tama\u00f1o=" + tamaño + '}';
+        return "Perro{" + "nombre=" + nombre + ", raza=" + raza + ", edad=" + edad + ", porte=" + porte + '}';
     }
     
     
