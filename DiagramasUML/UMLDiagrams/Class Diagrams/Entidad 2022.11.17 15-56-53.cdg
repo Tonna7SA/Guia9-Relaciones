@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Entidad">
+  <ClassDiagramComponents>
+    <Class name="Pelicula" package="Entidad" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="Pelicula" type="String" visibility="public"/>
+        <Field name="Director" type="String" visibility="public"/>
+        <Field name="Duracion" type="Double" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="Pelicula"/>
+          <Argument type="String" name="Director"/>
+          <Argument type="Double" name="Duracion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPelicula" returnType="String" visibility="public"/>
+        <Method name="setPelicula" returnType="void" visibility="public">
+          <Argument type="String" name="Pelicula"/>
+        </Method>
+        <Method name="getDirector" returnType="String" visibility="public"/>
+        <Method name="setDirector" returnType="void" visibility="public">
+          <Argument type="String" name="Director"/>
+        </Method>
+        <Method name="getDuracion" returnType="Double" visibility="public"/>
+        <Method name="setDuracion" returnType="void" visibility="public">
+          <Argument type="Double" name="Duracion"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ServicioPelicula" package="Entidad.Servicio" visibility="public" xPosition="536.0" yPosition="48.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="package"/>
+        <Field name="Cine" type="ArrayList&lt;Pelicula&gt;" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="IngresarPelicula" returnType="Pelicula" visibility="public"/>
+        <Method name="Peliculas" returnType="void" visibility="public"/>
+        <Method name="MostrarPeliculas" returnType="void" visibility="public"/>
+        <Method name="PeliculasMas1Hora" returnType="void" visibility="public"/>
+        <Method name="PeliculasMayoraMenor" returnType="void" visibility="public"/>
+        <Method name="PeliculasMenoraMayor" returnType="void" visibility="public"/>
+        <Method name="PeliculasTitulo" returnType="void" visibility="public"/>
+        <Method name="PeliculasDirector" returnType="void" visibility="public"/>
+        <Method name="Menu" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="Entidad.Servicio.ServicioPelicula" target="Entidad.Pelicula" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="Cine" source="Entidad.Servicio.ServicioPelicula" target="Entidad.Pelicula" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Pelicula&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

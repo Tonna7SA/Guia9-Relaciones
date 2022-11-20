@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Entidad">
+  <ClassDiagramComponents>
+    <Class name="Adopcion" package="Entidad" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="pichos" type="ArrayList&lt;Perro&gt;" visibility="private"/>
+        <Field name="individuos" type="ArrayList&lt;Persona&gt;" visibility="private"/>
+        <Field name="adoptado" type="HashMap&lt;Persona, Perro&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="ArrayList&lt;Perro&gt;" name="pichos"/>
+          <Argument type="ArrayList&lt;Persona&gt;" name="individuos"/>
+          <Argument type="HashMap&lt;Persona, Perro&gt;" name="adoptado"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getAdoptado" returnType="HashMap&lt;Persona, Perro&gt;" visibility="public"/>
+        <Method name="setAdoptado" returnType="void" visibility="public">
+          <Argument type="HashMap&lt;Persona, Perro&gt;" name="adoptado"/>
+        </Method>
+        <Method name="getPichos" returnType="ArrayList&lt;Perro&gt;" visibility="public"/>
+        <Method name="setPichos" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Perro&gt;" name="pichos"/>
+        </Method>
+        <Method name="getIndividuos" returnType="ArrayList&lt;Persona&gt;" visibility="public"/>
+        <Method name="setIndividuos" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Persona&gt;" name="individuos"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Perro" package="Entidad" visibility="public" xPosition="257.0" yPosition="380.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="raza" type="String" visibility="private"/>
+        <Field name="tamano" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="raza"/>
+          <Argument type="String" name="tamano"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getRaza" returnType="String" visibility="public"/>
+        <Method name="setRaza" returnType="void" visibility="public">
+          <Argument type="String" name="raza"/>
+        </Method>
+        <Method name="getTamano" returnType="String" visibility="public"/>
+        <Method name="setTamano" returnType="void" visibility="public">
+          <Argument type="String" name="tamano"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="Entidad" visibility="public" xPosition="983.0" yPosition="408.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ServicioAdopcion" package="Entidad.Servicio" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="a1" type="Adopcion" visibility="package"/>
+        <Field name="sp" type="ServicioPersona" visibility="package"/>
+        <Field name="sp1" type="ServicioPerro" visibility="package"/>
+        <Field name="leer" type="Scanner" visibility="package"/>
+        <Field name="adoptado" type="HashMap&lt;Persona, Perro&gt;" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Personas" returnType="void" visibility="public"/>
+        <Method name="Perros" returnType="void" visibility="public"/>
+        <Method name="MostarPersonas" returnType="void" visibility="public"/>
+        <Method name="MostrarPerros" returnType="void" visibility="public"/>
+        <Method name="Adopcion" returnType="void" visibility="public"/>
+        <Method name="MostarAdopciones" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ServicioPerro" package="Entidad.Servicio" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="pichichos" type="ArrayList&lt;Perro&gt;" visibility="package"/>
+        <Field name="leer" type="Scanner" visibility="package"/>
+        <Field name="p1" type="Perro" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="IngresoPerro" returnType="Perro" visibility="public"/>
+        <Method name="IngresodePerros" returnType="void" visibility="public"/>
+        <Method name="MostrarPerros" returnType="void" visibility="public"/>
+        <Method name="VariasPerros" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ServicioPersona" package="Entidad.Servicio" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="package"/>
+        <Field name="p1" type="Persona" visibility="package"/>
+        <Field name="individuo" type="ArrayList&lt;Persona&gt;" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="IngresoPersona" returnType="Persona" visibility="public"/>
+        <Method name="IngresodePersonas" returnType="void" visibility="public"/>
+        <Method name="MostrarPersonas" returnType="void" visibility="public"/>
+        <Method name="VariasPersonas" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="Entidad.Servicio.ServicioPerro" target="Entidad.Perro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="pichichos" source="Entidad.Servicio.ServicioPerro" target="Entidad.Perro" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Perro&gt;"/>
+    <HasRelation name="individuos" source="Entidad.Adopcion" target="Entidad.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Persona&gt;"/>
+    <UseRelation source="Entidad.Adopcion" target="Entidad.Persona" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="pichos" source="Entidad.Adopcion" target="Entidad.Perro" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Perro&gt;"/>
+    <HasRelation name="sp1" source="Entidad.Servicio.ServicioAdopcion" target="Entidad.Servicio.ServicioPerro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Entidad.Adopcion" target="Entidad.Perro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="adoptado" source="Entidad.Adopcion" target="Entidad.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;Persona, Perro&gt;"/>
+    <HasRelation name="adoptado" source="Entidad.Servicio.ServicioAdopcion" target="Entidad.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;Persona, Perro&gt;"/>
+    <HasRelation name="individuo" source="Entidad.Servicio.ServicioPersona" target="Entidad.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Persona&gt;"/>
+    <HasRelation name="p1" source="Entidad.Servicio.ServicioPersona" target="Entidad.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="p1" source="Entidad.Servicio.ServicioPerro" target="Entidad.Perro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="a1" source="Entidad.Servicio.ServicioAdopcion" target="Entidad.Adopcion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="sp" source="Entidad.Servicio.ServicioAdopcion" target="Entidad.Servicio.ServicioPersona" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Entidad.Servicio.ServicioPersona" target="Entidad.Persona" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

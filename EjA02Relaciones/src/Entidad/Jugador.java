@@ -62,12 +62,12 @@ public class Jugador {
     }
 
     public void setEstado(String estado) {
-        this.estado = "seco";
+        this.estado = estado;
     }
 
     @Override
     public String toString() {
-        return "Jugador{" + "ide=" + ide + ", nombre=" + nombre + ", estado=" + estado + '}';
+        return "Jugador [" + "Ide = " + ide + ", Nombre = " + nombre + ", Estado = " + estado + ']';
     }
 
 }

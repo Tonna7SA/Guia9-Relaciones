@@ -1,5 +1,7 @@
 package Entidad.Servicios;
 
+import Entidad.Jugador;
+
 /**
  *
  * @author Tonna/SA FR34K
@@ -16,7 +18,7 @@ public class ServicioJuego {
 
     ServicioRdA rda = new ServicioRdA();
     ServicioJugador sj = new ServicioJugador();
-
+    Jugador d1 = new Jugador();
     public void Jugar() {
         sj.CantidadJugadores();
         sj.llenado();
@@ -33,7 +35,11 @@ public class ServicioJuego {
             if (rda.mojar()) {
                 System.out.println("Disparo de Agua!!!");
                 System.out.println("");
-                System.out.println("Jugador{" + "ide=" + sj.jugadores.get(a).getIde() + ", nombre=" + sj.jugadores.get(a).getNombre() + ", estado=mojado" + '}');
+                d1.setIde(sj.jugadores.get(a).getIde());
+                d1.setNombre(sj.jugadores.get(a).getNombre());
+                d1.setEstado("Mojado");
+                sj.jugadores.set(a, d1);
+                System.out.println(sj.jugadores.get(a));
                 System.out.println("");
                 break;
             }
@@ -49,6 +55,13 @@ public class ServicioJuego {
             if (i == 6) {
                 i = 0;
             }
+        }
+        System.out.println("");
+        for (int i = 0; i < sj.jugadores.size(); i++) {
+            System.out.println(sj.jugadores.get(i));
+        }
+ {
+            
         }
     }
 }

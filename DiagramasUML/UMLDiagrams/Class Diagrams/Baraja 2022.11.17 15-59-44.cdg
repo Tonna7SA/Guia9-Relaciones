@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Baraja">
+  <ClassDiagramComponents>
+    <Class name="Baraja" package="Entidad" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="palo" type="String" visibility="public"/>
+        <Field name="numerocarta" type="Integer" visibility="public"/>
+        <Field name="bar" type="LinkedList&lt;Baraja&gt;" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="LinkedList&lt;Baraja&gt;" name="bar"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="palo"/>
+          <Argument type="Integer" name="numerocarta"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getBar" returnType="LinkedList&lt;Baraja&gt;" visibility="public"/>
+        <Method name="setBar" returnType="void" visibility="public">
+          <Argument type="LinkedList&lt;Baraja&gt;" name="bar"/>
+        </Method>
+        <Method name="getPalo" returnType="String" visibility="public"/>
+        <Method name="setPalo" returnType="void" visibility="public">
+          <Argument type="String" name="palo"/>
+        </Method>
+        <Method name="getNumerocarta" returnType="Integer" visibility="public"/>
+        <Method name="setNumerocarta" returnType="void" visibility="public">
+          <Argument type="Integer" name="numerocarta"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="Entidad.Baraja" target="Entidad.Baraja" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="bar" source="Entidad.Baraja" target="Entidad.Baraja" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="LinkedList&lt;Baraja&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

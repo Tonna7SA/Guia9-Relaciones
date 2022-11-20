@@ -37,7 +37,9 @@ public class ServicioJugador {
 
         System.out.println("Ingrese el nombre del Jugador N° " + i);
         j1.setIde(i);
-        j1.setNombre(leer.next());
+        String nombre = leer.next();
+        nombre = nombre.toUpperCase().substring(0, 1).concat(nombre.toLowerCase().substring(1));
+        j1.setNombre(nombre);
         j1.setEstado("Seco");
 
         return new Jugador(j1.getIde(), j1.getNombre(), j1.getEstado());
